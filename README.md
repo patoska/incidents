@@ -32,3 +32,11 @@ Basically all bonuses listed in the assignment.
 At this time, the app index was only showing the title of the incidents this was due a backend bug. I I spent like ~30 min more to reach the actual state, ie, persisting the data and showing all parameters.
 
 I did not count the time spent writing this README.me
+
+## Screenshots
+Create incident view:  
+<img width="770" height="795" alt="image" src="https://github.com/user-attachments/assets/cb03cdd2-05d6-4266-aa74-8f93f5f57a76" />
+
+Index view:  
+<img width="858" height="692" alt="image" src="https://github.com/user-attachments/assets/0b2afdbe-3196-4e1d-a847-85359c7af3dd" />
+
