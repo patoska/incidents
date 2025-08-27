@@ -1,0 +1,31 @@
+services:
+  bs_backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile.dev
+    command: sh -c "go get && air"
+    volumes:
+      - ./backend:/app
+    restart: unless-stopped
+    ports:
+      - 8080:8080
+    environment:
+      - GIN_MODE=debug
+      - PORT=8080
+      - FRONTEND_URL=http://localhost:3000
+  bs_frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile.dev
+    command: yarn dev --host
+    volumes:
+      - ./frontend:/app
+    ports:
+      - 3000:5173
+    environment:
+      - VITE_API_ENDPONT=http://localhost:8080
+    depends_on:
+      - bs_backend
+      
+volumes:
+  storage:
